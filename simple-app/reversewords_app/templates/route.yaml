@@ -3,7 +3,7 @@ kind: Route
 metadata:
   name: reverse-words
 spec:
-  host: {}
+  host:
   port:
     targetPort: http
   tls:
