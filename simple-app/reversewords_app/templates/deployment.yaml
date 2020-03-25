@@ -23,6 +23,10 @@ spec:
         env:
         - name: RELEASE
           value: {{ .Values.spec.release }}
+        - name: INSTANCE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.labels.argocd.argoproj.io/instance
         livenessProbe:
           httpGet:
             path: /health
