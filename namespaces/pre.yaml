@@ -1,7 +1,0 @@
-kind: Namespace
-apiVersion: v1
-metadata:
-  name: argocd-demo-pre
-spec:
-  finalizers:
-    - kubernetes
