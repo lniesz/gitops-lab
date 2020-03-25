@@ -1,0 +1,15 @@
+kind: List
+  kind: Namespace
+  apiVersion: v1
+  metadata:
+    name: argocd-demo-pre
+  spec:
+    finalizers:
+      - kubernetes
+  kind: Namespace
+  apiVersion: v1
+  metadata:
+    name: argocd-demo-pro
+  spec:
+    finalizers:
+      - kubernetes
