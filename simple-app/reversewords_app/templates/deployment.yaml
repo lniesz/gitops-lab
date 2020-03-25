@@ -22,7 +22,7 @@ spec:
           name: http
         env:
         - name: RELEASE
-          value: "Base release on 25th of March in the era of COVID-19"
+          value: {{ .Values.spec.release }}
         livenessProbe:
           httpGet:
             path: /health
