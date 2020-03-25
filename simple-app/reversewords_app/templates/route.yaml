@@ -3,7 +3,7 @@ kind: Route
 metadata:
   name: reverse-words
 spec:
-  host: reverse-words-{{ .Values.spec.namespace }}.apps.ocp4.localdomain
+  host: {}
   port:
     targetPort: http
   tls:
