@@ -22,7 +22,7 @@ spec:
           name: http
         env:
         - name: RELEASE
-          value: "Base release"
+          value: "Base release on 25th of March in the era of COVID-19"
         livenessProbe:
           httpGet:
             path: /health
