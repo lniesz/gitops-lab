@@ -21,7 +21,7 @@ spec:
     spec:
       serviceAccountName: bookinfo-reviews
       containers:
-      - name: reviews-{{ .Values.spec.instance }}
+      - name: reviews
         image: maistra/examples-bookinfo-reviews-v3:1.2.0
         imagePullPolicy: IfNotPresent
         ports:
