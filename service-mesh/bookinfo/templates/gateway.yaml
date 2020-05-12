@@ -11,4 +11,4 @@ spec:
       name: http
       protocol: HTTP
     hosts:
-    - "bookinfo-"{{ .Values.spec.instance }}".apps.ocp4.localdomain"
+    - "bookinfo-3.apps.ocp4.localdomain"
