@@ -11,4 +11,4 @@ spec:
       nodePort: 30036
       name: tcp
   selector:
-    name: mysqldb
+    app: mysqldb
