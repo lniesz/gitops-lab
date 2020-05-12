@@ -21,7 +21,7 @@ spec:
     spec:
       serviceAccountName: bookinfo-productpage
       containers:
-      - name: productpage-{{ .Values.spec.instance }}
+      - name: productpage
         image: maistra/examples-bookinfo-productpage-v1:1.2.0
         imagePullPolicy: IfNotPresent
         ports:
