@@ -1,7 +1,7 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: Gateway
 metadata:
-  name: bookinfo-{{ .Values.spec.instance }}-gateway
+  name: bookinfo-gateway
 spec:
   selector:
     istio: ingressgateway # use istio default controller
@@ -16,12 +16,12 @@ spec:
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
-  name: bookinfo-{{ .Values.spec.instance }}
+  name: bookinfo
 spec:
   hosts:
   - "bookinfo-"{{ .Values.spec.instance }}".apps.ocp4.localdomain"
   gateways:
-  - bookinfo-{{ .Values.spec.instance }}-gateway
+  - bookinfo-gateway
   http:
   - match:
     - uri:
