@@ -4,7 +4,7 @@ metadata:
   name: bookinfo
 spec:
   hosts:
-  - "bookinfo-"{{ .Values.spec.instance }}".apps.ocp4.localdomain"
+  - "bookinfo-3.apps.ocp4.localdomain"
   gateways:
   - bookinfo-gateway
   http:
