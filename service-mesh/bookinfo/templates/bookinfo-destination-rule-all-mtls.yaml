@@ -1,7 +1,7 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: DestinationRule
 metadata:
-  name: productpage2
+  name: productpage-{{ .Values.spec.instance }}
 spec:
   host: productpage
   trafficPolicy:
@@ -15,7 +15,7 @@ spec:
 apiVersion: networking.istio.io/v1alpha3
 kind: DestinationRule
 metadata:
-  name: reviews2
+  name: reviews-{{ .Values.spec.instance }}
 spec:
   host: reviews
   trafficPolicy:
@@ -35,7 +35,7 @@ spec:
 apiVersion: networking.istio.io/v1alpha3
 kind: DestinationRule
 metadata:
-  name: ratings2
+  name: ratings-{{ .Values.spec.instance }}
 spec:
   host: ratings
   trafficPolicy:
@@ -58,7 +58,7 @@ spec:
 apiVersion: networking.istio.io/v1alpha3
 kind: DestinationRule
 metadata:
-  name: details2
+  name: details-{{ .Values.spec.instance }}
 spec:
   host: details
   trafficPolicy:
