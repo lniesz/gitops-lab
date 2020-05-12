@@ -1,2 +1,2 @@
 spec:
-  instance: "3"
+  url: "bookinfo-3.apps.ocp4.localdomain"
