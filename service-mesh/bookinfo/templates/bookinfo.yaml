@@ -34,46 +34,46 @@ kind: Service
 metadata:
   name: details
   labels:
-    app: details2
+    app: details-{{ .Values.spec.instance }}
     service: details
 spec:
   ports:
   - port: 9080
     name: http
   selector:
-    app: details2
+    app: details-{{ .Values.spec.instance }}
 ---
 apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: bookinfo2-details
   labels:
-    account: details2
+    account: details-{{ .Values.spec.instance }}
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: details2-v1
+  name: details-{{ .Values.spec.instance }}-v1
   labels:
-    app: details2
+    app: details-{{ .Values.spec.instance }}
     version: v1
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: details2
+      app: details-{{ .Values.spec.instance }}
       version: v1
   template:
     metadata:
       annotations:
         sidecar.istio.io/inject: "true"
       labels:
-        app: details2
+        app: details-{{ .Values.spec.instance }}
         version: v1
     spec:
-      serviceAccountName: bookinfo2-details
+      serviceAccountName: bookinfo-{{ .Values.spec.instance }}-details
       containers:
-      - name: details2
+      - name: details-{{ .Values.spec.instance }}
         image: maistra/examples-bookinfo-details-v1:1.2.0
         imagePullPolicy: IfNotPresent
         ports:
@@ -87,46 +87,46 @@ kind: Service
 metadata:
   name: ratings
   labels:
-    app: ratings2
+    app: ratings-{{ .Values.spec.instance }}
     service: ratings
 spec:
   ports:
   - port: 9080
     name: http
   selector:
-    app: ratings2
+    app: ratings-{{ .Values.spec.instance }}
 ---
 apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: bookinfo2-ratings
   labels:
-    account: ratings2
+    account: ratings-{{ .Values.spec.instance }}
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ratings2-v1
+  name: ratings-{{ .Values.spec.instance }}-v1
   labels:
-    app: ratings2
+    app: ratings-{{ .Values.spec.instance }}
     version: v1
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: ratings2
+      app: ratings-{{ .Values.spec.instance }}
       version: v1
   template:
     metadata:
       annotations:
         sidecar.istio.io/inject: "true"
       labels:
-        app: ratings2
+        app: ratings-{{ .Values.spec.instance }}
         version: v1
     spec:
-      serviceAccountName: bookinfo2-ratings
+      serviceAccountName: bookinfo-{{ .Values.spec.instance }}-ratings
       containers:
-      - name: ratings2
+      - name: ratings-{{ .Values.spec.instance }}
         image: maistra/examples-bookinfo-ratings-v1:1.2.0
         imagePullPolicy: IfNotPresent
         ports:
@@ -140,46 +140,46 @@ kind: Service
 metadata:
   name: reviews
   labels:
-    app: reviews2
+    app: reviews-{{ .Values.spec.instance }}
     service: reviews
 spec:
   ports:
   - port: 9080
     name: http
   selector:
-    app: reviews2
+    app: reviews-{{ .Values.spec.instance }}
 ---
 apiVersion: v1
 kind: ServiceAccount
 metadata:
-  name: bookinfo2-reviews
+  name: bookinfo-{{ .Values.spec.instance }}-reviews
   labels:
-    account: reviews2
+    account: reviews-{{ .Values.spec.instance }}
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: reviews2-v1
+  name: reviews-{{ .Values.spec.instance }}-v1
   labels:
-    app: reviews2
+    app: reviews-{{ .Values.spec.instance }}
     version: v1
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: reviews2
+      app: reviews-{{ .Values.spec.instance }}
       version: v1
   template:
     metadata:
       annotations:
         sidecar.istio.io/inject: "true"
       labels:
-        app: reviews2
+        app: reviews-{{ .Values.spec.instance }}
         version: v1
     spec:
-      serviceAccountName: bookinfo2-reviews
+      serviceAccountName: bookinfo-{{ .Values.spec.instance }}-reviews
       containers:
-      - name: reviews2
+      - name: reviews-{{ .Values.spec.instance }}
         image: maistra/examples-bookinfo-reviews-v1:1.2.0
         imagePullPolicy: IfNotPresent
         ports:
@@ -188,27 +188,27 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: reviews2-v2
+  name: reviews-{{ .Values.spec.instance }}-v2
   labels:
-    app: reviews2
+    app: reviews-{{ .Values.spec.instance }}
     version: v2
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: reviews2
+      app: reviews-{{ .Values.spec.instance }}
       version: v2
   template:
     metadata:
       annotations:
         sidecar.istio.io/inject: "true"
       labels:
-        app: reviews2
+        app: reviews-{{ .Values.spec.instance }}
         version: v2
     spec:
-      serviceAccountName: bookinfo2-reviews
+      serviceAccountName: bookinfo-{{ .Values.spec.instance }}-reviews
       containers:
-      - name: reviews2
+      - name: reviews-{{ .Values.spec.instance }}
         image: maistra/examples-bookinfo-reviews-v2:1.2.0
         imagePullPolicy: IfNotPresent
         ports:
@@ -217,27 +217,27 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: reviews2-v3
+  name: reviews-{{ .Values.spec.instance }}-v3
   labels:
-    app: reviews2
+    app: reviews-{{ .Values.spec.instance }}
     version: v3
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: reviews2
+      app: reviews-{{ .Values.spec.instance }}
       version: v3
   template:
     metadata:
       annotations:
         sidecar.istio.io/inject: "true"
       labels:
-        app: reviews2
+        app: reviews-{{ .Values.spec.instance }}
         version: v3
     spec:
-      serviceAccountName: bookinfo2-reviews
+      serviceAccountName: bookinfo-{{ .Values.spec.instance }}-reviews
       containers:
-      - name: reviews2
+      - name: reviews-{{ .Values.spec.instance }}
         image: maistra/examples-bookinfo-reviews-v3:1.2.0
         imagePullPolicy: IfNotPresent
         ports:
@@ -251,46 +251,46 @@ kind: Service
 metadata:
   name: productpage
   labels:
-    app: productpage2
+    app: productpage-{{ .Values.spec.instance }}
     service: productpage
 spec:
   ports:
   - port: 9080
     name: http
   selector:
-    app: productpage2
+    app: productpage-{{ .Values.spec.instance }}
 ---
 apiVersion: v1
 kind: ServiceAccount
 metadata:
-  name: bookinfo2-productpage
+  name: bookinfo-{{ .Values.spec.instance }}-productpage
   labels:
-    account: productpage2
+    account: productpage-{{ .Values.spec.instance }}
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: productpage2-v1
+  name: productpage-{{ .Values.spec.instance }}-v1
   labels:
-    app: productpage2
+    app: productpage-{{ .Values.spec.instance }}
     version: v1
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: productpage2
+      app: productpage-{{ .Values.spec.instance }}
       version: v1
   template:
     metadata:
       annotations:
         sidecar.istio.io/inject: "true"
       labels:
-        app: productpage2
+        app: productpage-{{ .Values.spec.instance }}
         version: v1
     spec:
-      serviceAccountName: bookinfo2-productpage
+      serviceAccountName: bookinfo-{{ .Values.spec.instance }}-productpage
       containers:
-      - name: productpage2
+      - name: productpage-{{ .Values.spec.instance }}
         image: maistra/examples-bookinfo-productpage-v1:1.2.0
         imagePullPolicy: IfNotPresent
         ports:
