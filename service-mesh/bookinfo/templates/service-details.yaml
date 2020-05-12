@@ -10,4 +10,4 @@ spec:
   - port: 9080
     name: http
   selector:
-    app: details-{{ .Values.spec.instance }}
+    app: details
