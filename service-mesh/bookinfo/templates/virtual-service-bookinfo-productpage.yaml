@@ -4,7 +4,7 @@ metadata:
   name: bookinfo
 spec:
   hosts:
-  - "bookinfo-3.apps.ocp4.localdomain"
+  - {{ .Values.spec.url }}
   gateways:
   - bookinfo-gateway
   http:
