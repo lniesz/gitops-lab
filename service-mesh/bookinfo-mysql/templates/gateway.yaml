@@ -1,0 +1,14 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: Gateway
+metadata:
+  name: bookinfo-mysql-gateway
+spec:
+  selector:
+    istio: ingressgateway # use istio default controller
+  servers:
+  - port:
+      number: 3306
+      name: tcp-mysql
+      protocol: TCP
+    hosts:
+    - bookinfo-3-mysql.apps.ocp4.localdomain
