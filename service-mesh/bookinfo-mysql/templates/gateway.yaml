@@ -11,4 +11,4 @@ spec:
       name: tcp-mysql
       protocol: TCP
     hosts:
-    - bookinfo-3-mysql.apps.ocp4.localdomain
+    - {{ .Values.spec.url }}
