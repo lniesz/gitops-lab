@@ -1,0 +1,12 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: mysqldb
+spec:
+  hosts:
+  - mysqldb-in-bookinfo-3-mysql
+  tcp:
+  - route:
+    - destination:
+      host: mysqldb
+      subset: v1
