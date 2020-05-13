@@ -7,7 +7,7 @@ spec:
     istio: ingressgateway # use istio default controller
   servers:
   - port:
-      number: 30306
+      number: 3306
       name: tcp
       protocol: TCP
     hosts:
