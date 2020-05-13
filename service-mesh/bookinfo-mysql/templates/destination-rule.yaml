@@ -3,7 +3,7 @@ kind: DestinationRule
 metadata:
   name: mysqldb
 spec:
-  host: mysqldb-in-bookinfo-3-mysql
+  host: mysqldb
   trafficPolicy:
     tls:
       mode: ISTIO_MUTUAL
