@@ -46,7 +46,7 @@ spec:
           - name: DB_TYPE
             value: "mysql"
           - name: MYSQL_DB_HOST
-            value: mysqldb
+            value: bookinfo-3-mysql.apps.ocp4.localdomain
           - name: MYSQL_DB_PORT
             value: "30036"
           - name: MYSQL_DB_USER
