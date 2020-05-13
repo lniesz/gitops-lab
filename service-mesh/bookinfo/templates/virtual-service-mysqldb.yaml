@@ -4,15 +4,15 @@ metadata:
   name: mysqldb
 spec:
   hosts:
-  - mysqldb-in-bookinfo-3-mysql
-  exportTo:
-  - "*"
+    - mysqldb-in-bookinfo-3-mysql
   tcp:
-  - match:
-    - port: 3306
-    route:
-    - destination:
-        host: mysqldb.bookinfo-3-mysql.svc.ocp4.localdomain
-        subset: v1
-        port:
-          number: 3306
+    - match:
+        - port: 3306
+      route:
+        - destination:
+            host: mysqldb.bookinfo-3-mysql.svc.ocp4.localdomain
+            port:
+              number: 3306
+            subset: v1
+  exportTo:
+    - '*'
