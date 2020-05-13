@@ -10,5 +10,5 @@ spec:
   tcp:
   - route:
     - destination:
-        host: mysqldb
+        host: mysqldb.bookinfo-3-mysql.svc.ocp4.localdomain
         subset: v1
