@@ -1,0 +1,10 @@
+apiVersion: "authentication.istio.io/v1alpha1"
+kind: "Policy"
+metadata:
+  name: mysql-mtls-authn
+spec:
+  targets:
+  - name: mysqldb     # The name of *your* K8s Service
+  peers:
+  - mtls:
+      mode: STRICT
