@@ -4,7 +4,7 @@ metadata:
   name: bookinfo-mysql
 spec:
   hosts:
-  - bookinfo-3-mysql.apps.ocp4.localdomain
+  - {{ .Values.spec.url }}
   gateways:
   - bookinfo-mysql-gateway
   mysql-tcp:
