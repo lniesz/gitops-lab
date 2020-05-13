@@ -7,7 +7,7 @@ spec:
   - {{ .Values.spec.url }}
   gateways:
   - bookinfo-mysql-gateway
-  mysql-tcp:
+  tcp:
   - route:
     - destination:
         host: mysqldb
