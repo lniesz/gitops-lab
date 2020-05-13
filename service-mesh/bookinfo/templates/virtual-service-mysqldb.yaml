@@ -8,5 +8,5 @@ spec:
   tcp:
   - route:
     - destination:
-      host: mysqldb
-      subset: v1
+        host: mysqldb
+        subset: v1
