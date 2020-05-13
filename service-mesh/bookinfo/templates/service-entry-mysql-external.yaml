@@ -1,0 +1,14 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: ServiceEntry
+metadata:
+  name: mysql-external
+spec:
+  hosts:
+  - mysqldb
+  addresses:
+  - 192.168.8.0/32
+  ports:
+  - name: tcp
+    number: 30036
+    protocol: tcp
+  location: MESH_EXTERNAL
