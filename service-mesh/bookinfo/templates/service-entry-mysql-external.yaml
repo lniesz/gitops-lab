@@ -4,11 +4,11 @@ metadata:
   name: mysql-external
 spec:
   hosts:
-  - mysqldb
+  - bookinfo-3-mysql.apps.ocp4.localdomain
   addresses:
   - 192.168.8.0/24
   ports:
   - name: tcp
-    number: 30036
+    number: 30306
     protocol: tcp
   location: MESH_EXTERNAL
