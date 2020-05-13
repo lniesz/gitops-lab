@@ -4,6 +4,9 @@ metadata:
   name: mysqldb
 spec:
   host: mysqldb
+  exportTo:
+  - "."
+  - "bookinfo-3"
   trafficPolicy:
     tls:
       mode: ISTIO_MUTUAL
