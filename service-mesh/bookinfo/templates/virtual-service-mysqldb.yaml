@@ -7,7 +7,7 @@ spec:
   - mysqldb-in-bookinfo-3-mysql
   exportTo:
   - "."
-  - "bookinfo-3-mysql
+  - "bookinfo-3-mysql"
   tcp:
   - route:
     - destination:
