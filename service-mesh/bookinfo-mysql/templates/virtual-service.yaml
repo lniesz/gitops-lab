@@ -1,0 +1,15 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: bookinfo-mysql
+spec:
+  hosts:
+  - bookinfo-3-mysql.apps.ocp4.localdomain
+  gateways:
+  - bookinfo-mysql-gateway
+  mysql-tcp:
+  - route:
+    - destination:
+        host: mysqldb
+        port:
+          number: 3306
