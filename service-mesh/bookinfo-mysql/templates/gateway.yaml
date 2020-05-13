@@ -8,7 +8,7 @@ spec:
   servers:
   - port:
       number: 3306
-      name: tcp-mysql
+      name: tcp
       protocol: TCP
     hosts:
     - {{ .Values.spec.url }}
