@@ -1,2 +1,3 @@
 spec:
   rootpassword: cGFzc3dvcmQ=
+  url: bookinfo-3-mysql.apps.ocp4.localdomain
