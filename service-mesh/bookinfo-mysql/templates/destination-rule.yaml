@@ -3,7 +3,7 @@ kind: DestinationRule
 metadata:
   name: mysqldb
 spec:
-  host: mysqldb.bookinfo-3-mysql.svc.ocp4.localdomain
+  host: mysqldb.bookinfo-3-mysql.svc.cluster.local
   exportTo:
   - "*"
   trafficPolicy:
