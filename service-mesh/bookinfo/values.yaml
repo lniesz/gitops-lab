@@ -1,5 +1,5 @@
 spec:
   url: "bookinfo-3.apps.ocp4.localdomain"
-  mysql-service: "mysqldb.bookinfo-3-mysql.svc.cluster.local
+  mysql-service: "mysqldb.bookinfo-3-mysql.svc.cluster.local"
   app-namespace: "bookinfo-3"
   mysql-namespace: "bookinfo-3-mysql"
