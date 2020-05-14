@@ -3,7 +3,7 @@ kind: DestinationRule
 metadata:
   name: mysqldb
 spec:
-  host: {{ .Values.spec.mysql-service }}
+  host: {{ .Values.spec.mysqlService }}
   exportTo:
   - "*"
   trafficPolicy:
