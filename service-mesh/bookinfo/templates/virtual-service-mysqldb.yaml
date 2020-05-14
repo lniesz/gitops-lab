@@ -11,4 +11,5 @@ spec:
       route:
         - destination:
             host: mysqldb.bookinfo-3-mysql.svc.cluster.local
-            port: 3306
+            port:
+              number: 3306
