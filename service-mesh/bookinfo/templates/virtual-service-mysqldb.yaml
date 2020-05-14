@@ -6,10 +6,6 @@ spec:
   hosts:
   - mysqldb.bookinfo-3.svc.cluster.local
   tcp:
-    - match:
-      - port: 3306
-      route:
+    - route:
         - destination:
             host: mysqldb.bookinfo-3-mysql.svc.cluster.local
-            port:
-              number: 3306
