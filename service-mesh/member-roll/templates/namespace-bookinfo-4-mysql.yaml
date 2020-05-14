@@ -1,0 +1,7 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: bookinfo-4-mysql
+spec:
+  finalizers:
+    - kubernetes
