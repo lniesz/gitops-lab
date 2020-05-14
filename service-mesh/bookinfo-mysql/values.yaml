@@ -1,5 +1,5 @@
 spec:
   rootpassword: cGFzc3dvcmQ=
   url: bookinfo-3-mysql.apps.ocp4.localdomain
-  mysql-service: "mysqldb.bookinfo-3-mysql.svc.cluster.local"
-  mysql-namespace: "bookinfo-3-mysql"
+  mysqlService: "mysqldb.bookinfo-3-mysql.svc.cluster.local"
+  mysqlNamespace: "bookinfo-3-mysql"
