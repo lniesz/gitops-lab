@@ -6,5 +6,7 @@ metadata:
 spec:
   members:
     # a list of projects joined into the service mesh
+    - bookinfo
+    - bookinfo2
     - bookinfo-3
     - bookinfo-3-mysql
