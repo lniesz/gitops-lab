@@ -4,9 +4,11 @@ metadata:
   name: mysqldb
 spec:
   hosts:
-  - mysqldb-in-bookinfo-3-mysql
+  - mysqldb.bookinfo-3.svc.cluster.local
   tcp:
-    - route:
+    - match:
+      - port: 3306
+      route:
         - destination:
             host: mysqldb.bookinfo-3-mysql.svc.cluster.local
-            subset: v1
+            port: 3306
