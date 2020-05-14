@@ -3,10 +3,18 @@ kind: ServiceMeshMemberRoll
 metadata:
   name: default
   namespace: istio-system
+  ownerReferences:
+    - apiVersion: maistra.io/v1
+      kind: ServiceMeshControlPlane
+      name: basic-install
+  finalizers:
+    - maistra.io/istio-operator
 spec:
   members:
-    # a list of projects joined into the service mesh
     - bookinfo
     - bookinfo2
     - bookinfo-3
     - bookinfo-3-mysql
+    - proj-a
+    - proj-b
+    - proj-c
