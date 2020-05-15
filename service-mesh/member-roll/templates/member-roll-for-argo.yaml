@@ -18,6 +18,3 @@ spec:
     - bookinfo-3-mysql
     - bookinfo-4
     - bookinfo-4-mysql
-    - proj-a
-    - proj-b
-    - proj-c
