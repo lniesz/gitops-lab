@@ -12,8 +12,7 @@ metadata:
     - maistra.io/istio-operator
 spec:
   members:
-    - bookinfo
-    - bookinfo2
+    - shop
     - bookinfo-3
     - bookinfo-3-mysql
     - bookinfo-4
