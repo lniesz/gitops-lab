@@ -27,7 +27,8 @@ spec:
       app: lets-chat
   template:
     metadata:
-      creationTimestamp: null
+      annotations:
+        sidecar.istio.io/inject: "true"
       labels:
         app: lets-chat
         deploymentconfig: lets-chat
