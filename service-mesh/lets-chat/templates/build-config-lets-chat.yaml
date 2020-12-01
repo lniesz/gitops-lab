@@ -40,11 +40,11 @@ spec:
     - type: Generic
       generic:
         secretReference:
-          name: lets-chat-git-generic-webhook-secret
+          name: lets-chat-generic-webhook-secret
     - type: GitHub
       github:
         secretReference:
-          name: lets-chat-git-github-webhook-secret
+          name: lets-chat-github-webhook-secret
     - type: ImageChange
       imageChange:
         lastTriggeredImageID: >-
