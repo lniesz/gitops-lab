@@ -11,6 +11,6 @@ spec:
   http: 
   - route:
     - destination:
-        host: main
+        host: lets-chat
         port:
           number: 8080
