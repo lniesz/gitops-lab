@@ -1,0 +1,17 @@
+kind: Service
+apiVersion: v1
+metadata:
+  annotations:
+    template.openshift.io/expose-uri: 'mongodb://{.spec.clusterIP}:{.spec.ports[?(.name=="mongo")].port}'
+  name: mongodb
+  labels:
+    template: mongodb-persistent-template
+spec:
+  ports:
+    - name: mongo
+      protocol: TCP
+      port: 27017
+      targetPort: 27017
+  selector:
+    name: mongodb
+  sessionAffinity: None
