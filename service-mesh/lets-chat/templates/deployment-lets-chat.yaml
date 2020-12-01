@@ -10,6 +10,7 @@ metadata:
       [{"from":{"kind":"ImageStreamTag","name":"lets-chat:latest","namespace":"lets-chat"},"fieldPath":"spec.template.spec.containers[?(@.name==\"lets-chat\")].image","pause":"false"}]
     openshift.io/generated-by: OpenShiftWebConsole
   name: lets-chat
+  generation: 1
   labels:
     app: lets-chat
     app.kubernetes.io/component: lets-chat
