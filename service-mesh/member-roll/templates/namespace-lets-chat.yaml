@@ -1,0 +1,7 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: lets-chat
+spec:
+  finalizers:
+    - kubernetes
