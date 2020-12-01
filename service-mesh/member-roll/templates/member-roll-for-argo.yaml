@@ -17,3 +17,4 @@ spec:
     - bookinfo-3-mysql
     - bookinfo-4
     - bookinfo-4-mysql
+    - lets-chat
