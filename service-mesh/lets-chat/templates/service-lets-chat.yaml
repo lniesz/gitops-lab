@@ -1,0 +1,27 @@
+kind: Service
+apiVersion: v1
+metadata:
+  annotations:
+    app.openshift.io/vcs-ref: master
+    app.openshift.io/vcs-uri: 'https://github.com/lniesz/lets-chat.git'
+    openshift.io/generated-by: OpenShiftWebConsole
+  name: lets-chat-git
+  labels:
+    app: lets-chat
+    app.kubernetes.io/component: lets-chatt
+    app.kubernetes.io/instance: lets-chatt
+    app.kubernetes.io/name: nodejs
+    app.kubernetes.io/part-of: lets-chatt-app
+    app.openshift.io/runtime: nodejs
+    app.openshift.io/runtime-version: '12'
+spec:
+  ports:
+    - name: 8080-tcp
+      protocol: TCP
+      port: 8080
+      targetPort: 8080
+  selector:
+    app: lets-chat
+    deploymentconfig: lets-chat
+  type: ClusterIP
+  sessionAffinity: None
