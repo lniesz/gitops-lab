@@ -19,6 +19,7 @@ metadata:
     app.kubernetes.io/part-of: lets-chat-app
     app.openshift.io/runtime: nodejs
     app.openshift.io/runtime-version: '12'
+    page: main
 spec:
   replicas: 1
   selector:
@@ -30,6 +31,7 @@ spec:
       labels:
         app: lets-chat
         deploymentconfig: lets-chat
+        page: main
     spec:
       containers:
         - name: lets-chat
