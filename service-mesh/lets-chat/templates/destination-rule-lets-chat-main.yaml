@@ -4,7 +4,7 @@ kind: DestinationRule
 metadata:
   name: lets-chat
 spec:
-  host: main
+  host: lets-chat
   trafficPolicy:
     tls:
       mode: ISTIO_MUTUAL
