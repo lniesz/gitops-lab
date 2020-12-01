@@ -9,6 +9,6 @@ spec:
     tls:
       mode: ISTIO_MUTUAL
   subsets:
-  - name: v1
+  - name: main
     labels:
-      version: v1
+      page: main
