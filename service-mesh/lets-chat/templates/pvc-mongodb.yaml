@@ -1,13 +1,7 @@
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
-  annotations:
-    pv.kubernetes.io/bind-completed: 'yes'
-    pv.kubernetes.io/bound-by-controller: 'yes'
-    volume.beta.kubernetes.io/storage-provisioner: nfs-client-provisioner/nfs
   name: mongodb
-  finalizers:
-    - kubernetes.io/pvc-protection
 spec:
   accessModes:
     - ReadWriteOnce
@@ -15,4 +9,3 @@ spec:
     requests:
       storage: 1Gi
   storageClassName: nfs
-  volumeMode: Filesystem
