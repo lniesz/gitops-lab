@@ -5,7 +5,7 @@ metadata:
     alpha.image.policy.openshift.io/resolve-names: '*'
     app.openshift.io/vcs-ref: master
     app.openshift.io/vcs-uri: 'https://github.com/lniesz/lets-chat.git'
-    deployment.kubernetes.io/revision: '91'
+    deployment.kubernetes.io/revision: '1'
     image.openshift.io/triggers: >-
       [{"from":{"kind":"ImageStreamTag","name":"lets-chat:latest","namespace":"lets-chat"},"fieldPath":"spec.template.spec.containers[?(@.name==\"lets-chat\")].image","pause":"false"}]
     openshift.io/generated-by: OpenShiftWebConsole
