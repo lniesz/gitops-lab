@@ -34,7 +34,7 @@ spec:
       containers:
         - name: lets-chat
           image: >-
-            image-registry.openshift-image-registry.svc:5000/lets-chat/lets-chat
+            image-registry.openshift-image-registry.svc:5000/lets-chat/lets-chat:latest
           ports:
             - containerPort: 8080
               protocol: TCP
