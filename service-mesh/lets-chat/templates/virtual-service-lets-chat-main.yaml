@@ -7,7 +7,7 @@ spec:
   hosts:
   - {{ .Values.spec.url }}
   gateways:
-  - lets-chat
+  - lets-chat-gateway
   http: 
   - route:
     - destination:
