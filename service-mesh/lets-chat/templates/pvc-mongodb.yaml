@@ -8,8 +8,6 @@ metadata:
   name: mongodb
   finalizers:
     - kubernetes.io/pvc-protection
-  labels:
-    template: mongodb-persistent-template
 spec:
   accessModes:
     - ReadWriteOnce
