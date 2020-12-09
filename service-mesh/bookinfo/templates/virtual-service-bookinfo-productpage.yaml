@@ -6,7 +6,7 @@ spec:
   hosts:
   - {{ .Values.spec.url }}
   gateways:
-  - bookinfo-gateway
+  - {{ .Values.spec.appNamespace }}-gateway
   http:
   - match:
     - uri:
