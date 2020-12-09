@@ -3,13 +3,6 @@ kind: ServiceMeshMemberRoll
 metadata:
   name: default
   namespace: istio-system
-  ownerReferences:
-    - apiVersion: maistra.io/v1
-      kind: ServiceMeshControlPlane
-      name: basic-install
-      uid: ee456292-b47b-4c0c-9b7e-774025422695      
-  finalizers:
-    - maistra.io/istio-operator
 spec:
   members:
     - shop
